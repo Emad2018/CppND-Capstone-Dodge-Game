@@ -1,1 +1,1 @@
-/usr/bin/g++-7  -std=c++17   CMakeFiles/Dodge.dir/src/main.cpp.o  -o Dodge -L/usr/lib/x86_64-linux-gnu  -lSDL2 
+/usr/bin/g++-7  -std=c++17   CMakeFiles/Dodge.dir/src/main.cpp.o CMakeFiles/Dodge.dir/src/enemies.cpp.o CMakeFiles/Dodge.dir/src/dodge.cpp.o CMakeFiles/Dodge.dir/src/controller.cpp.o  -o Dodge -L/usr/lib/x86_64-linux-gnu  -lSDL2 

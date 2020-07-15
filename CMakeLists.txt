@@ -12,6 +12,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS} src)
 
-add_executable(Dodge src/main.cpp)
+add_executable(Dodge src/main.cpp src/enemies.cpp src/dodge.cpp src/controller.cpp)
 string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES)
 target_link_libraries(Dodge ${SDL2_LIBRARIES})

@@ -123,6 +123,87 @@ Dodge/fast:
 	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/build
 .PHONY : Dodge/fast
 
+src/controller.o: src/controller.cpp.o
+
+.PHONY : src/controller.o
+
+# target to build an object file
+src/controller.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/controller.cpp.o
+.PHONY : src/controller.cpp.o
+
+src/controller.i: src/controller.cpp.i
+
+.PHONY : src/controller.i
+
+# target to preprocess a source file
+src/controller.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/controller.cpp.i
+.PHONY : src/controller.cpp.i
+
+src/controller.s: src/controller.cpp.s
+
+.PHONY : src/controller.s
+
+# target to generate assembly for a file
+src/controller.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/controller.cpp.s
+.PHONY : src/controller.cpp.s
+
+src/dodge.o: src/dodge.cpp.o
+
+.PHONY : src/dodge.o
+
+# target to build an object file
+src/dodge.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/dodge.cpp.o
+.PHONY : src/dodge.cpp.o
+
+src/dodge.i: src/dodge.cpp.i
+
+.PHONY : src/dodge.i
+
+# target to preprocess a source file
+src/dodge.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/dodge.cpp.i
+.PHONY : src/dodge.cpp.i
+
+src/dodge.s: src/dodge.cpp.s
+
+.PHONY : src/dodge.s
+
+# target to generate assembly for a file
+src/dodge.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/dodge.cpp.s
+.PHONY : src/dodge.cpp.s
+
+src/enemies.o: src/enemies.cpp.o
+
+.PHONY : src/enemies.o
+
+# target to build an object file
+src/enemies.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/enemies.cpp.o
+.PHONY : src/enemies.cpp.o
+
+src/enemies.i: src/enemies.cpp.i
+
+.PHONY : src/enemies.i
+
+# target to preprocess a source file
+src/enemies.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/enemies.cpp.i
+.PHONY : src/enemies.cpp.i
+
+src/enemies.s: src/enemies.cpp.s
+
+.PHONY : src/enemies.s
+
+# target to generate assembly for a file
+src/enemies.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/enemies.cpp.s
+.PHONY : src/enemies.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Dodge"
 	@echo "... edit_cache"
+	@echo "... src/controller.o"
+	@echo "... src/controller.i"
+	@echo "... src/controller.s"
+	@echo "... src/dodge.o"
+	@echo "... src/dodge.i"
+	@echo "... src/dodge.s"
+	@echo "... src/enemies.o"
+	@echo "... src/enemies.i"
+	@echo "... src/enemies.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

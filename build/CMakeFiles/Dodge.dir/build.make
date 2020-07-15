@@ -70,17 +70,62 @@ CMakeFiles/Dodge.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dodge.dir/src/main.cpp.s"
 	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/CppND-Capstone-Dodge-Game/src/main.cpp -o CMakeFiles/Dodge.dir/src/main.cpp.s
 
+CMakeFiles/Dodge.dir/src/enemies.cpp.o: CMakeFiles/Dodge.dir/flags.make
+CMakeFiles/Dodge.dir/src/enemies.cpp.o: ../src/enemies.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Dodge.dir/src/enemies.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dodge.dir/src/enemies.cpp.o -c /home/workspace/CppND-Capstone-Dodge-Game/src/enemies.cpp
+
+CMakeFiles/Dodge.dir/src/enemies.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dodge.dir/src/enemies.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/CppND-Capstone-Dodge-Game/src/enemies.cpp > CMakeFiles/Dodge.dir/src/enemies.cpp.i
+
+CMakeFiles/Dodge.dir/src/enemies.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dodge.dir/src/enemies.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/CppND-Capstone-Dodge-Game/src/enemies.cpp -o CMakeFiles/Dodge.dir/src/enemies.cpp.s
+
+CMakeFiles/Dodge.dir/src/dodge.cpp.o: CMakeFiles/Dodge.dir/flags.make
+CMakeFiles/Dodge.dir/src/dodge.cpp.o: ../src/dodge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Dodge.dir/src/dodge.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dodge.dir/src/dodge.cpp.o -c /home/workspace/CppND-Capstone-Dodge-Game/src/dodge.cpp
+
+CMakeFiles/Dodge.dir/src/dodge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dodge.dir/src/dodge.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/CppND-Capstone-Dodge-Game/src/dodge.cpp > CMakeFiles/Dodge.dir/src/dodge.cpp.i
+
+CMakeFiles/Dodge.dir/src/dodge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dodge.dir/src/dodge.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/CppND-Capstone-Dodge-Game/src/dodge.cpp -o CMakeFiles/Dodge.dir/src/dodge.cpp.s
+
+CMakeFiles/Dodge.dir/src/controller.cpp.o: CMakeFiles/Dodge.dir/flags.make
+CMakeFiles/Dodge.dir/src/controller.cpp.o: ../src/controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Dodge.dir/src/controller.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dodge.dir/src/controller.cpp.o -c /home/workspace/CppND-Capstone-Dodge-Game/src/controller.cpp
+
+CMakeFiles/Dodge.dir/src/controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dodge.dir/src/controller.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/CppND-Capstone-Dodge-Game/src/controller.cpp > CMakeFiles/Dodge.dir/src/controller.cpp.i
+
+CMakeFiles/Dodge.dir/src/controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dodge.dir/src/controller.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/CppND-Capstone-Dodge-Game/src/controller.cpp -o CMakeFiles/Dodge.dir/src/controller.cpp.s
+
 # Object files for target Dodge
 Dodge_OBJECTS = \
-"CMakeFiles/Dodge.dir/src/main.cpp.o"
+"CMakeFiles/Dodge.dir/src/main.cpp.o" \
+"CMakeFiles/Dodge.dir/src/enemies.cpp.o" \
+"CMakeFiles/Dodge.dir/src/dodge.cpp.o" \
+"CMakeFiles/Dodge.dir/src/controller.cpp.o"
 
 # External object files for target Dodge
 Dodge_EXTERNAL_OBJECTS =
 
 Dodge: CMakeFiles/Dodge.dir/src/main.cpp.o
+Dodge: CMakeFiles/Dodge.dir/src/enemies.cpp.o
+Dodge: CMakeFiles/Dodge.dir/src/dodge.cpp.o
+Dodge: CMakeFiles/Dodge.dir/src/controller.cpp.o
 Dodge: CMakeFiles/Dodge.dir/build.make
 Dodge: CMakeFiles/Dodge.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Dodge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Dodge"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Dodge.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

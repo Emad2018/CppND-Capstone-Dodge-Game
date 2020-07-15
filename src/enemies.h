@@ -1,6 +1,7 @@
-#ifndef DODGE_H
-#define DODGE_H
+#ifndef ENEMIES_H
+#define ENEMIES_H
 
+#include <random>
 #include <vector>
 #include "SDL.h"
 
@@ -8,30 +9,21 @@ class Enemies {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
-  Enemies(int grid_width, int grid_height)
-      : grid_width(grid_width),
-        grid_height(grid_height),
-        x(grid_width / 2),
-        y(grid_height / 2) {}
-
+  Enemies(int grid_width, int grid_height);
   void Update();
-
-
-  bool EnemiesCell(int x, int y);
-
-  Direction direction = Direction::kUp;
-
+  
   float speed{0.1f};
-
-  bool alive{true};
   float x;
-  float y;
+  float y{0};
 
 
  private:
-
+  std::random_device dev;
+  std::mt19937 engine;
+  std::uniform_int_distribution<int> random_w;
   int grid_width;
   int grid_height;
+   Direction direction = Direction::kDown;
 };
 
 #endif

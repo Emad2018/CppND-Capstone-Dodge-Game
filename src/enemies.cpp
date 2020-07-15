@@ -2,16 +2,17 @@
 #include <cmath>
 #include <iostream>
 
+Enemies::Enemies(int grid_width, int grid_height)      : grid_width(grid_width),
+                                                         grid_height(grid_height),
+        												 engine(dev()),
+     													 random_w(0, static_cast<int>(grid_width))
+{
+
+        x = random_w(engine);
+
+}
 void Enemies::Update() {
 
       y += speed;
 }
 
-
-// Inefficient method to check if cell is occupied by snake.
-bool Enemies::DodgeCell(int x, int y) {
-  if (x == static_cast<int>(x) && y == static_cast<int>(y)) {
-    return true;
-  }
-  return false;
-}
