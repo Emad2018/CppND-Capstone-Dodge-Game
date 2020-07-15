@@ -1,15 +1,15 @@
-#ifndef ENEMIES_H
-#define ENEMIES_H
+#ifndef ENEMIE_H
+#define ENEMIE_H
 
 #include <random>
 #include <vector>
 #include "SDL.h"
 
-class Enemies {
+class Enemie {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
-  Enemies(int grid_width, int grid_height);
+  Enemie(int grid_width, int grid_height);
   void Update();
   
   float speed{0.1f};

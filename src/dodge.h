@@ -21,7 +21,7 @@ class Dodge {
 
   Direction direction = Direction::kUp;
 
-  float speed{0.1f};
+  float speed{1};
 
   bool alive{true};
   float x;

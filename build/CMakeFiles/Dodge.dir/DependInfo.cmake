@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/workspace/CppND-Capstone-Dodge-Game/src/controller.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/controller.cpp.o"
   "/home/workspace/CppND-Capstone-Dodge-Game/src/dodge.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/dodge.cpp.o"
-  "/home/workspace/CppND-Capstone-Dodge-Game/src/enemies.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/enemies.cpp.o"
+  "/home/workspace/CppND-Capstone-Dodge-Game/src/enemie.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/enemie.cpp.o"
+  "/home/workspace/CppND-Capstone-Dodge-Game/src/game.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/game.cpp.o"
   "/home/workspace/CppND-Capstone-Dodge-Game/src/main.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/main.cpp.o"
+  "/home/workspace/CppND-Capstone-Dodge-Game/src/renderer.cpp" "/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles/Dodge.dir/src/renderer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
