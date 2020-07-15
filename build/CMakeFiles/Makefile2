@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/workspace/CppND-Capstone-Dodge-Game
 CMAKE_BINARY_DIR = /home/workspace/CppND-Capstone-Dodge-Game/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/HelloWorld.dir
+# Target rules for target CMakeFiles/Dodge.dir
 
 # All Build rule for target.
-CMakeFiles/HelloWorld.dir/all:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/depend
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=1,2 "Built target HelloWorld"
-.PHONY : CMakeFiles/HelloWorld.dir/all
+CMakeFiles/Dodge.dir/all:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/depend
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles --progress-num=1,2 "Built target Dodge"
+.PHONY : CMakeFiles/Dodge.dir/all
 
 # Include target in all.
-all: CMakeFiles/HelloWorld.dir/all
+all: CMakeFiles/Dodge.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/HelloWorld.dir/rule: cmake_check_build_system
+CMakeFiles/Dodge.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HelloWorld.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Dodge.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Capstone-Dodge-Game/build/CMakeFiles 0
-.PHONY : CMakeFiles/HelloWorld.dir/rule
+.PHONY : CMakeFiles/Dodge.dir/rule
 
 # Convenience name for target.
-HelloWorld: CMakeFiles/HelloWorld.dir/rule
+Dodge: CMakeFiles/Dodge.dir/rule
 
-.PHONY : HelloWorld
-
-# clean rule for target.
-CMakeFiles/HelloWorld.dir/clean:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/clean
-.PHONY : CMakeFiles/HelloWorld.dir/clean
+.PHONY : Dodge
 
 # clean rule for target.
-clean: CMakeFiles/HelloWorld.dir/clean
+CMakeFiles/Dodge.dir/clean:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/clean
+.PHONY : CMakeFiles/Dodge.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Dodge.dir/clean
 
 .PHONY : clean
 

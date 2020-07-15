@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HelloWorld
+# Target rules for targets named Dodge
 
 # Build rule for target.
-HelloWorld: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HelloWorld
-.PHONY : HelloWorld
+Dodge: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Dodge
+.PHONY : Dodge
 
 # fast build rule for target.
-HelloWorld/fast:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
-.PHONY : HelloWorld/fast
+Dodge/fast:
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/build
+.PHONY : Dodge/fast
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +129,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +138,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +147,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Dodge.dir/build.make CMakeFiles/Dodge.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -157,7 +157,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... HelloWorld"
+	@echo "... Dodge"
 	@echo "... edit_cache"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

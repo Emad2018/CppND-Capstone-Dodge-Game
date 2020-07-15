@@ -139,7 +139,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=HelloWorld
+CMAKE_PROJECT_NAME:STATIC=Dodge
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -201,10 +201,19 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Dodge_BINARY_DIR:STATIC=/home/workspace/CppND-Capstone-Dodge-Game/build
+
+//Value Computed by CMake
+Dodge_SOURCE_DIR:STATIC=/home/workspace/CppND-Capstone-Dodge-Game
+
+//Value Computed by CMake
 HelloWorld_BINARY_DIR:STATIC=/home/workspace/CppND-Capstone-Dodge-Game/build
 
 //Value Computed by CMake
 HelloWorld_SOURCE_DIR:STATIC=/home/workspace/CppND-Capstone-Dodge-Game
+
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 
 
 ########################
