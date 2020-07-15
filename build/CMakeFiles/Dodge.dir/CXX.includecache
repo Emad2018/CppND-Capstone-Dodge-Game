@@ -6,27 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/controller.cpp
-controller.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/controller.h
-iostream
--
-SDL.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/SDL.h
-dodge.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/dodge.h
-
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/controller.h
 dodge.h
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/dodge.h
-
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/dodge.cpp
-dodge.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/dodge.h
-cmath
--
-iostream
--
 
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/dodge.h
 vector
@@ -75,11 +57,9 @@ game.h
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/game.h
 renderer.h
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/renderer.h
-
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/renderer.cpp
-renderer.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/renderer.h
-iostream
+fstream
+-
+sstream
 -
 string
 -

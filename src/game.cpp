@@ -14,14 +14,14 @@ Game::Game(std::size_t grid_width, std::size_t grid_height):_dodge(grid_width,gr
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
-               std::size_t target_frame_duration) {
+               std::size_t target_frame_duration,bool &_play) {
   Uint32 title_timestamp = SDL_GetTicks();
   Uint32 frame_start;
   Uint32 frame_end;
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
-
+  char user_input;
   while (running) {
     frame_start = SDL_GetTicks();
 
@@ -36,7 +36,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // takes.
     frame_count++;
     frame_duration = frame_end - frame_start;
-
+    
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1500) {
       if (_dodge.alive)
@@ -44,6 +44,23 @@ void Game::Run(Controller const &controller, Renderer &renderer,
           _enemies.push_back(std::make_shared<Enemie>(_grid_width, _grid_height));
           score +=10;
           //_enemies[0]->speed += 0.01;
+
+      }
+      else
+      {
+           std::cout<<"Play again?press y\n";
+           std::cin>>&user_input;
+           if((user_input=='y')||(user_input=='Y'))
+           {
+              _play=true;
+              std::cout<<"let's Go\n";
+
+           }
+           else
+           _play=false;
+
+           break;
+
 
       }
       renderer.UpdateWindowTitle(score, frame_count);
@@ -72,16 +89,13 @@ void Game::Update()
   }
   
   _dodge.Update();
-  std::cout<<"0\n";
+
   for (int i=0;i<_enemies.size();i++)
   {
     _enemies[i]->Update();
-    std::cout<<i<<"\n";
 
     if(_dodge.DodgeCell(_enemies[i]->x, _enemies[i]->y))
     {
-      std::cout<<"_enemies[i]->x= "<<_enemies[i]->x<<" _enemies[i]->y= "<<_enemies[i]->y<<"\n";
-      std::cout<<"_dodge.x= "<<_dodge._x<<" _dodge.y= "<<_dodge._y<<"\n";
 
      _dodge.alive=false;
     }
