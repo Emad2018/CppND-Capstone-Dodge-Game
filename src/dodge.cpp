@@ -5,31 +5,34 @@
 void Dodge::Update() {
   switch (direction) {
     case Direction::kUp:
-      y -= speed;
+      _y -= speed;
       break;
 
     case Direction::kDown:
-      y += speed;
+      _y += speed;
       break;
 
     case Direction::kLeft:
-      x -= speed;
+      _x -= speed;
       break;
 
     case Direction::kRight:
-      x += speed;
+      _x += speed;
       break;
+    default:
+        break;
   }
 
   // Wrap the Snake around to the beginning if going off of the screen.
-  x = fmod(x + grid_width, grid_width);
-  y = fmod(y + grid_height, grid_height);
+  _x = fmod(_x + grid_width, grid_width);
+  _y = fmod(_y + grid_height, grid_height);
 }
 
 
 // Inefficient method to check if cell is occupied by snake.
 bool Dodge::DodgeCell(int x, int y) {
-  if (x == static_cast<int>(x) && y == static_cast<int>(y)) {
+  if (static_cast<int>(_x) == static_cast<int>(x) && static_cast<int>(_y) == static_cast<int>(y)) {
+    
     return true;
   }
   return false;

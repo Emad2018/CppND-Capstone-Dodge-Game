@@ -2,9 +2,11 @@
 #include <cmath>
 #include <iostream>
 
+
+float Enemie::speed=.1;
 Enemie::Enemie(int grid_width, int grid_height)      : grid_width(grid_width),
                                                          grid_height(grid_height),
-        												 engine(dev()),
+        									engine(dev()),
      													 random_w(0, static_cast<int>(grid_width))
 {
 

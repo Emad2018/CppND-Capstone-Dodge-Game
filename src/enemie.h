@@ -5,25 +5,22 @@
 #include <vector>
 #include "SDL.h"
 
-class Enemie {
- public:
-  enum class Direction { kUp, kDown, kLeft, kRight };
+class Enemie
+{
+public:
+   Enemie(int grid_width, int grid_height);
+   void Update();
 
-  Enemie(int grid_width, int grid_height);
-  void Update();
-  
-  float speed{0.1f};
-  float x;
-  float y{0};
+   static float speed;
+   float x;
+   float y{0};
 
-
- private:
-  std::random_device dev;
-  std::mt19937 engine;
-  std::uniform_int_distribution<int> random_w;
-  int grid_width;
-  int grid_height;
-   Direction direction = Direction::kDown;
+private:
+   std::random_device dev;
+   std::mt19937 engine;
+   std::uniform_int_distribution<int> random_w;
+   int grid_width;
+   int grid_height;
 };
 
 #endif

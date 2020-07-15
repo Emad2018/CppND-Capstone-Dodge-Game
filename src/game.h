@@ -20,7 +20,8 @@ class Game {
  private:
   Dodge _dodge;
   std::vector<std::shared_ptr<Enemie>>_enemies;
-
+  int _grid_width;
+  int _grid_height;
   int score{0};
 
   void Update();

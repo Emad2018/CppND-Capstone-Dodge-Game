@@ -6,26 +6,26 @@
 
 class Dodge {
  public:
-  enum class Direction { kUp, kDown, kLeft, kRight };
+  enum class Direction { kUp, kDown, kLeft, kRight ,KHold};
 
   Dodge(int grid_width, int grid_height)
       : grid_width(grid_width),
         grid_height(grid_height),
-        x(grid_width / 2),
-        y(grid_height / 2) {}
+        _x(grid_width / 2),
+        _y(grid_height / 2) {}
 
   void Update();
 
 
   bool DodgeCell(int x, int y);
 
-  Direction direction = Direction::kUp;
+  Direction direction = Direction::KHold;
 
-  float speed{1};
+  float speed{.1};
 
   bool alive{true};
-  float x;
-  float y;
+  float _x;
+  float _y;
 
 
  private:

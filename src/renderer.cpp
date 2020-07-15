@@ -60,8 +60,8 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
   }
 
   
-  block.x = static_cast<int>(dodge.x) * block.w;
-  block.y = static_cast<int>(dodge.y) * block.h;
+  block.x = static_cast<int>(dodge._x) * block.w;
+  block.y = static_cast<int>(dodge._y) * block.h;
   if (dodge.alive) {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
   } else {

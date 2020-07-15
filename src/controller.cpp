@@ -31,5 +31,10 @@ void Controller::HandleInput(bool &running, Dodge &dodge) const {
           break;
       }
     }
+    else if(e.type == SDL_KEYUP)
+    {
+        dodge.direction = Dodge::Direction::KHold;
+
+    }
   }
 }
