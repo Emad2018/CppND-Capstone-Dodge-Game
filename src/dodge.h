@@ -4,9 +4,17 @@
 #include <vector>
 #include "SDL.h"
 
-class Dodge {
- public:
-  enum class Direction { kUp, kDown, kLeft, kRight ,KHold};
+class Dodge
+{
+public:
+  enum class Direction
+  {
+    kUp,
+    kDown,
+    kLeft,
+    kRight,
+    KHold
+  };
 
   Dodge(int grid_width, int grid_height)
       : grid_width(grid_width),
@@ -15,7 +23,6 @@ class Dodge {
         _y(grid_height / 2) {}
 
   void Update();
-
 
   bool DodgeCell(int x, int y);
 
@@ -27,9 +34,7 @@ class Dodge {
   float _x;
   float _y;
 
-
- private:
-
+private:
   int grid_width;
   int grid_height;
 };

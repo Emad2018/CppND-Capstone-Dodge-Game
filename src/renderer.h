@@ -6,8 +6,9 @@
 #include "dodge.h"
 #include "enemie.h"
 
-class Renderer {
- public:
+class Renderer
+{
+public:
   Renderer(const std::size_t screen_width, const std::size_t screen_height,
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
@@ -15,7 +16,7 @@ class Renderer {
   void Render(Dodge const dodge, std::vector<std::shared_ptr<Enemie>> const enemies);
   void UpdateWindowTitle(int score, int fps);
 
- private:
+private:
   SDL_Window *sdl_window;
   SDL_Renderer *sdl_renderer;
 

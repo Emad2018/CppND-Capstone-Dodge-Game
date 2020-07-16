@@ -8,9 +8,11 @@ Renderer::Renderer(const std::size_t screen_width,
     : screen_width(screen_width),
       screen_height(screen_height),
       grid_width(grid_width),
-      grid_height(grid_height) {
+      grid_height(grid_height)
+{
   // Initialize SDL
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+  if (SDL_Init(SDL_INIT_VIDEO) < 0)
+  {
     std::cerr << "SDL could not initialize.\n";
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
   }
@@ -20,25 +22,29 @@ Renderer::Renderer(const std::size_t screen_width,
                                 SDL_WINDOWPOS_CENTERED, screen_width,
                                 screen_height, SDL_WINDOW_SHOWN);
 
-  if (nullptr == sdl_window) {
+  if (nullptr == sdl_window)
+  {
     std::cerr << "Window could not be created.\n";
     std::cerr << " SDL_Error: " << SDL_GetError() << "\n";
   }
 
   // Create renderer
   sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_ACCELERATED);
-  if (nullptr == sdl_renderer) {
+  if (nullptr == sdl_renderer)
+  {
     std::cerr << "Renderer could not be created.\n";
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
   }
 }
 
-Renderer::~Renderer() {
+Renderer::~Renderer()
+{
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
 }
 
-void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> const enemies) {
+void Renderer::Render(Dodge const dodge, std::vector<std::shared_ptr<Enemie>> const enemies)
+{
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -49,7 +55,8 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
 
   // Render enemies
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-  for (auto const point : enemies) {
+  for (auto const point : enemies)
+  {
     block.x = static_cast<int>(point->x) * block.w;
     block.y = static_cast<int>(point->y) * block.h;
     SDL_RenderFillRect(sdl_renderer, &block);
@@ -59,9 +66,12 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
 
   block.x = static_cast<int>(dodge._x) * block.w;
   block.y = static_cast<int>(dodge._y) * block.h;
-  if (dodge.alive) {
+  if (dodge.alive)
+  {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
-  } else {
+  }
+  else
+  {
     SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
   }
   SDL_RenderFillRect(sdl_renderer, &block);
@@ -70,7 +80,8 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int score, int fps) {
+void Renderer::UpdateWindowTitle(int score, int fps)
+{
   std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }

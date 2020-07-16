@@ -44,6 +44,54 @@ In this project, you can build your own C++ application starting with this repo,
 6. Enemie     ==> the base class for the Falling Enemie 
 
 ## Rubric points
-
-
-
+1. Loops, Functions, I/O
+   * The project demonstrates an understanding of C++ functions and control structures :
+      main.cpp/game.cpp/render.cpp
+   * The project reads data from a file and process the data, or the program writes data to a file:
+      main.cpp line 21,44
+   * The project accepts user input and processes the input:
+      game.cpp line 57
+	  
+2. Object Oriented Programming:
+   * The project uses Object Oriented Programming techniques:
+       X.h ,X.cpp
+   * Classes use appropriate access specifiers for class members:
+	   X.h
+   * Class constructors utilize member initialization lists:
+       X.h
+   * Classes abstract implementation details from their interfaces:
+       X.h
+   * Classes encapsulate behavior:
+       X.h
+   * Classes follow an appropriate inheritance hierarchy:
+       X.h
+   * Overloaded functions allow the same function to operate on different parameters:
+       enemie.h line 12,13
+   * Derived class functions override virtual base class functions:
+      NONE
+   * Templates generalize functions in the project:
+   
+   
+3. Memory Management:
+   * The project makes use of references in function declarations: 
+   
+   * The project uses destructors appropriately:
+   
+   * The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate:
+   
+   * The project follows the Rule of 5:
+   
+   * The project uses move semantics to move data, instead of copying it, where possible:
+   
+   * The project uses smart pointers instead of raw pointers:
+   
+   
+4. Concurrency
+   * The project uses multithreading: 
+   
+   * A promise and future is used in the project:
+   
+   * A mutex or lock is used in the project:
+   
+   * A condition variable is used in the project:
+   

@@ -10,6 +10,7 @@ class Enemie
 public:
    Enemie(int grid_width, int grid_height);
    void Update();
+   void Update(float input_speed);
 
    static float speed;
    float x;

@@ -3,11 +3,10 @@
 
 #include "dodge.h"
 
-class Controller {
- public:
+class Controller
+{
+public:
   void HandleInput(bool &running, Dodge &dodge) const;
-
- 
 };
 
 #endif

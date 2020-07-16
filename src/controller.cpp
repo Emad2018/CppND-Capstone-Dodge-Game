@@ -3,38 +3,43 @@
 #include "SDL.h"
 #include "dodge.h"
 
-void Controller::HandleInput(bool &running, Dodge &dodge) const {
+void Controller::HandleInput(bool &running, Dodge &dodge) const
+{
   SDL_Event e;
-  while (SDL_PollEvent(&e)) {
-    if (e.type == SDL_QUIT) {
+  while (SDL_PollEvent(&e))
+  {
+    if (e.type == SDL_QUIT)
+    {
       running = false;
-    } else if (e.type == SDL_KEYDOWN) {
-      switch (e.key.keysym.sym) {
-        case SDLK_UP:
+    }
+    else if (e.type == SDL_KEYDOWN)
+    {
+      switch (e.key.keysym.sym)
+      {
+      case SDLK_UP:
 
-          dodge.direction = Dodge::Direction::kUp;
-          break;
+        dodge.direction = Dodge::Direction::kUp;
+        break;
 
-        case SDLK_DOWN:
-          
-          dodge.direction = Dodge::Direction::kDown;
-          break;
+      case SDLK_DOWN:
 
-        case SDLK_LEFT:
+        dodge.direction = Dodge::Direction::kDown;
+        break;
 
-          dodge.direction = Dodge::Direction::kLeft;
-          break;
+      case SDLK_LEFT:
 
-        case SDLK_RIGHT:
+        dodge.direction = Dodge::Direction::kLeft;
+        break;
 
-          dodge.direction = Dodge::Direction::kRight;
-          break;
+      case SDLK_RIGHT:
+
+        dodge.direction = Dodge::Direction::kRight;
+        break;
       }
     }
-    else if(e.type == SDL_KEYUP)
+    else if (e.type == SDL_KEYUP)
     {
-        dodge.direction = Dodge::Direction::KHold;
-
+      dodge.direction = Dodge::Direction::KHold;
     }
   }
 }
