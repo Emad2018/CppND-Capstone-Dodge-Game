@@ -1,6 +1,8 @@
-# CPPND: Capstone Hello World Repo
+# CPPND: Capstone Dodge Repo
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+
+<img src="dodge.gif"/>
 
 The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 
@@ -17,10 +19,31 @@ In this project, you can build your own C++ application starting with this repo,
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
-
+* SDL2 >= 2.0
+  * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
+  * Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source.
 ## Basic Build Instructions
 
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./Dodge`.
+
+## Game
+1. Start the game 
+2. Use the Arrow Key 
+3. Avoid the Enemies 
+4. You can restart the game when you Die by answer the question "Play again?press y"
+
+## Game Structure 
+1. main
+2. Game       ==> Game logic  
+3. Controller ==> Take the user Input
+4. Renderer   ==> Display the Dodge and the Enemies 
+5. Dodge      ==> the base class for the Dodge object 
+6. Enemie     ==> the base class for the Falling Enemie 
+
+## Rubric points
+
+
+
