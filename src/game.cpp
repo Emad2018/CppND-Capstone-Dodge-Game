@@ -5,9 +5,7 @@
 Game::Game(std::size_t grid_width, std::size_t grid_height):_dodge(grid_width,grid_height)
     
 {
-  
-
-   
+  // add the first Enemie 
 	_enemies.push_back(std::make_shared<Enemie>(grid_width, grid_height));
    _grid_width = static_cast<int>(grid_width);
    _grid_height = static_cast<int>(grid_height);
@@ -23,10 +21,16 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   bool running = true;
   char user_input;
   while (running) {
+    
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, _dodge);
+    if(!running)
+    { 
+      _play=false;
+       break;
+    }
     Update();
     renderer.Render(_dodge, _enemies);
 
@@ -37,43 +41,49 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     frame_count++;
     frame_duration = frame_end - frame_start;
     
-    // After every second, update the window title.
-    if (frame_end - title_timestamp >= 1500) {
-      if (_dodge.alive)
-      {
-          _enemies.push_back(std::make_shared<Enemie>(_grid_width, _grid_height));
-          score +=10;
-          //_enemies[0]->speed += 0.01;
+    
+    if ((frame_end - title_timestamp) % 20==0)  // check if the differeence devisable by 20 (it will be random add for the Enemies int next line)
+    {
 
-      }
-      else
-      {
-           std::cout<<"Play again?press y\n";
-           std::cin>>&user_input;
-           if((user_input=='y')||(user_input=='Y'))
-           {
-              _play=true;
-              std::cout<<"let's Go\n";
+          if (_dodge.alive)
+          {
+              _enemies.push_back(std::make_shared<Enemie>(_grid_width, _grid_height));  // add new Enemie 
+              score +=5;                                                                // increase the score
+            
 
-           }
-           else
-           _play=false;
+          }
+          else
+          {   
+              std::cout<<"Play again?press y\n";                                       //check If the player Died then ask for restart the game
+              std::cin>>&user_input;
+              if((user_input=='y')||(user_input=='Y'))
+              {
+                  _play=true;
+                  std::cout<<"let's Go\n";
 
-           break;
-
-
-      }
-      renderer.UpdateWindowTitle(score, frame_count);
-      frame_count = 0;
-      title_timestamp = frame_end;
-      //std::cout<< _enemies[1]->speed<<std::endl;
-      
+              }
+              else
+             {
+              _play=false;         
+              }
+              break;
+          }
     }
+    // After every second, update the window title.
+      else if(frame_end - title_timestamp >= 1000)
+      {
+        renderer.UpdateWindowTitle(score, frame_count);
+        frame_count = 0;
+        title_timestamp = frame_end;
+        
+      }
+    
 
     // If the time for this frame is too small (i.e. frame_duration is
     // smaller than the target ms_per_frame), delay the loop to
     // achieve the correct frame rate.
-    if (frame_duration < target_frame_duration) {
+    if (frame_duration < target_frame_duration) 
+    {
       SDL_Delay(target_frame_duration - frame_duration);
     }
   }
@@ -94,12 +104,12 @@ void Game::Update()
   {
     _enemies[i]->Update();
 
-    if(_dodge.DodgeCell(_enemies[i]->x, _enemies[i]->y))
+    if(_dodge.DodgeCell(_enemies[i]->x, _enemies[i]->y))      //check if dodge hits the Enemie 
     {
 
      _dodge.alive=false;
     }
-    if(_enemies[i]->y >= _grid_height)
+    if(_enemies[i]->y >= _grid_height)                       // check if the Enemie reached the ENd of the sceen then remove it
     {
         _enemies.erase(_enemies.begin()+i);
 

@@ -10,12 +10,13 @@ Enemie::Enemie(int grid_width, int grid_height)      : grid_width(grid_width),
      													 random_w(0, static_cast<int>(grid_width))
 {
 
-        x = random_w(engine);
+
+        x = random_w(engine);                // start from random location in top of the sceern
 
 }
 void Enemie::Update() {
 
-      y += speed;
-      y = fmod(y + grid_height, grid_height);
+      y += speed;                                   // move down  in the sceen
+      
 }
 

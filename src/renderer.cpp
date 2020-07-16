@@ -47,11 +47,7 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
   SDL_RenderClear(sdl_renderer);
 
-  // Render food
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-
-
-  // Render snake's body
+  // Render enemies
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
   for (auto const point : enemies) {
     block.x = static_cast<int>(point->x) * block.w;
@@ -59,7 +55,8 @@ void Renderer::Render(Dodge const dodge,std::vector<std::shared_ptr<Enemie>> con
     SDL_RenderFillRect(sdl_renderer, &block);
   }
 
-  
+  // Render Dodge
+
   block.x = static_cast<int>(dodge._x) * block.w;
   block.y = static_cast<int>(dodge._y) * block.h;
   if (dodge.alive) {

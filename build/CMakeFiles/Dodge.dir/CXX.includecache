@@ -48,22 +48,6 @@ dodge.h
 enemie.h
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/enemie.h
 
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/main.cpp
-iostream
--
-controller.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/controller.h
-game.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/game.h
-renderer.h
-/home/emad/Repos/CppND-Capstone-Dodge-Game/src/renderer.h
-fstream
--
-sstream
--
-string
--
-
 /home/emad/Repos/CppND-Capstone-Dodge-Game/src/renderer.h
 memory
 -

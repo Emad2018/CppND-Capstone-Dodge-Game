@@ -23,13 +23,13 @@ void Dodge::Update() {
         break;
   }
 
-  // Wrap the Snake around to the beginning if going off of the screen.
+  // Wrap the Dodge around to the beginning if going off of the screen.
   _x = fmod(_x + grid_width, grid_width);
   _y = fmod(_y + grid_height, grid_height);
 }
 
 
-// Inefficient method to check if cell is occupied by snake.
+
 bool Dodge::DodgeCell(int x, int y) {
   if (static_cast<int>(_x) == static_cast<int>(x) && static_cast<int>(_y) == static_cast<int>(y)) {
     

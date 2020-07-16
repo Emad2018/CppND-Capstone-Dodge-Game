@@ -6,7 +6,7 @@
 class Controller {
  public:
   void HandleInput(bool &running, Dodge &dodge) const;
- private:
+
  
 };
 
