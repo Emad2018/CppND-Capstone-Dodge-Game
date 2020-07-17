@@ -86,12 +86,5 @@ In this project, you can build your own C++ application starting with this repo,
    * The project uses smart pointers instead of raw pointers:
       game.h line 21 _enemies
    
-4. Concurrency
-   * The project uses multithreading: 
-   
-   * A promise and future is used in the project:
-   
-   * A mutex or lock is used in the project:
-   
-   * A condition variable is used in the project:
+
    
