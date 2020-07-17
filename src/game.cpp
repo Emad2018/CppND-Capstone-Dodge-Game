@@ -6,7 +6,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height) : _dodge(std::move(g
 
 {
   // add the first Enemie
-  _enemies.push_back(std::make_shared<Enemie>(std::move(grid_width), std::move(grid_height)));
+  
   _grid_width = static_cast<int>(grid_width);
   _grid_height = static_cast<int>(grid_height);
 }
@@ -21,6 +21,18 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
   char user_input;
+  bool first_time=true;
+  while(first_time)
+  { 
+    
+    frame_end = SDL_GetTicks();
+    controller.HandleInput(running, _dodge);
+    _dodge.Update();
+    renderer.Render(_dodge, _enemies);
+    if(frame_end-title_timestamp>=1000)
+      first_time=false;
+  }
+  _enemies.push_back(std::make_shared<Enemie>(std::move(_grid_width), std::move(_grid_height)));
   while (running)
   {
 
@@ -33,6 +45,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
       _play = false;
       break;
     }
+
     Update();
     renderer.Render(_dodge, _enemies);
 
