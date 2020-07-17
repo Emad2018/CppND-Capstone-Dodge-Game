@@ -7,7 +7,7 @@
 #include <string>
 
 template <typename T>
-void print_score(string message, T score)
+void print_score(std::string message, T score)
 {
   std::cout << message << score << std::endl;
 }

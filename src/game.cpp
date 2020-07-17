@@ -2,11 +2,11 @@
 #include <iostream>
 #include "SDL.h"
 
-Game::Game(std::size_t grid_width, std::size_t grid_height) : _dodge(grid_width, grid_height)
+Game::Game(std::size_t grid_width, std::size_t grid_height) : _dodge(std::move(grid_width), std::move(grid_height))
 
 {
   // add the first Enemie
-  _enemies.push_back(std::make_shared<Enemie>(grid_width, grid_height));
+  _enemies.push_back(std::make_shared<Enemie>(std::move(grid_width), std::move(grid_height)));
   _grid_width = static_cast<int>(grid_width);
   _grid_height = static_cast<int>(grid_height);
 }
@@ -48,7 +48,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
       if (_dodge.alive)
       {
-        _enemies.push_back(std::make_shared<Enemie>(_grid_width, _grid_height)); // add new Enemie
+       _enemies.push_back(std::make_shared<Enemie>(std::move(_grid_width), std::move(_grid_height)));// add new Enemie
         score += 5;                                                              // increase the score
       }
       else

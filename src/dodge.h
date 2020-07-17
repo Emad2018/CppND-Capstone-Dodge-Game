@@ -16,7 +16,7 @@ public:
     KHold
   };
 
-  Dodge(int grid_width, int grid_height)
+  Dodge(int &&grid_width, int &&grid_height)
       : grid_width(grid_width),
         grid_height(grid_height),
         _x(grid_width / 2),

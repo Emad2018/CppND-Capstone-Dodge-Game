@@ -70,21 +70,21 @@ In this project, you can build your own C++ application starting with this repo,
    * Derived class functions override virtual base class functions:
       NONE
    * Templates generalize functions in the project:
-   
+      main.cpp
    
 3. Memory Management:
    * The project makes use of references in function declarations: 
-   
+       dodge.h/enemie.h
    * The project uses destructors appropriately:
-   
+       renderer.cpp
    * The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate:
-   
+      renderer.cpp
    * The project follows the Rule of 5:
-   
+       NONE
    * The project uses move semantics to move data, instead of copying it, where possible:
-   
+      game.cpp Game::Game
    * The project uses smart pointers instead of raw pointers:
-   
+      game.h line 21 _enemies
    
 4. Concurrency
    * The project uses multithreading: 
